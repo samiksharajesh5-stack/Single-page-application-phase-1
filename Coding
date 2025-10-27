@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple SPA</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        nav button { margin: 5px; padding: 10px 20px; }
+        #content { margin-top: 20px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>My Simple SPA</h1>
+    <nav>
+        <button onclick="showPage('home')">Home</button>
+        <button onclick="showPage('about')">About</button>
+        <button onclick="showPage('contact')">Contact</button>
+    </nav>
+    <div id="content">Welcome to the Home page!</div>
+
+    <script>
+        function showPage(page) {
+            const content = document.getElementById('content');
+            if(page === 'home') {
+                content.innerHTML = 'Welcome to the Home page!';
+            } else if(page === 'about') {
+                content.innerHTML = 'This is a simple SPA example created using HTML, CSS, and JS.';
+            } else if(page === 'contact') {
+                content.innerHTML = 'Contact us at: example@example.com';
+            }
+        }
+    </script>
+</body>
+</html>
+
